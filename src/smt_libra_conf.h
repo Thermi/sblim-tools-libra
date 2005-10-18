@@ -18,8 +18,8 @@
  *
  */ 
 
-#ifndef _CONF_H_
-#define _CONF_H_
+#ifndef _SMT_LIBRA_CONF_H_
+#define _SMT_LIBRA_CONF_H_
 
 #ifdef __cplusplus
 extern "C" {

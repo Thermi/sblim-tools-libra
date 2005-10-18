@@ -1,0 +1,92 @@
+#
+# $Id$
+#
+# Package spec for @PACKAGE@
+#
+
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
+Summary: SBLIM Common Resource Access Library for WBEM-SMT tasks
+Name: @PACKAGE_TARNAME@
+Version: @PACKAGE_VERSION@
+Release: 1
+Group: Systems Management/Base
+URL: http://www.sblim.org
+License: CPL
+
+Source0: http://prdownloads.sourceforge.net/sblim/%{name}-%{version}.tar.bz2
+
+%Description
+The tools-libra package provides common functionality required by 
+the task-specific resource access layers of the wbem-smt tasks such as 
+cmpi-dns and cmpi-samba.
+
+
+%Package devel
+Summary: SBLIM Common Resource Access Library for WBEM-SMT tasks Header Development Files
+Group: Systems Management/Base
+Requires: %{name} = %{version}
+
+%Description devel
+The tools-libra package provides common functionality required by 
+the task-specific resource access layers of the wbem-smt tasks such as 
+cmpi-dns and cmpi-samba.
+This package includes the header files and link libraries for dependent 
+provider packages
+
+%prep
+
+%setup -n %{name}-%{version}
+
+export PATCH_GET=0
+
+#%patch0 -p0
+
+%build
+
+%configure
+make
+
+%clean
+if [ "x${RPM_BUILD_ROOT}" != "x" ] ; then
+ rm -rf ${RPM_BUILD_ROOT}
+fi
+
+%install
+if [ "x${RPM_BUILD_ROOT}" != "x" ] ; then
+ rm -rf ${RPM_BUILD_ROOT}
+fi
+
+make DESTDIR=$RPM_BUILD_ROOT install
+
+# remove unused libtool files
+rm -f $RPM_BUILD_ROOT/%{_libdir}/*a
+strip $RPM_BUILD_ROOT/%{_libdir}/*.so*
+
+
+%pre
+
+%post
+/sbin/ldconfig
+
+%preun
+
+%postun 
+/sbin/ldconfig
+
+%files
+
+%defattr(-,root,root) 
+%docdir %{_datadir}/doc/%{name}-%{version}
+%{_datadir}/doc/%{name}-%{version}
+%{_libdir}/*.so.*
+
+%files devel
+
+%defattr(-,root,root)
+%{_includedir}/*
+%{_libdir}/*.so
+
+%changelog
+* Wed Aug 25 2005 Wolfgang Taphorn <taphorn@de.ibm.com> %{version}-%{release}
+  - initial support

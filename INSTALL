@@ -1,7 +1,0 @@
-To build the files, Just type make
-
-in order to install, you may have the PEGASUS_HOME environment variable set.
-
-after that, just type make install
-
-

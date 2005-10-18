@@ -18,9 +18,11 @@
  *
  */ 
 
-#ifndef _MONITORS_H_
-#define _MONITORS_H_
-
+#ifndef _SMT_LIBRA_MONITORS_H_
+#define _SMT_LIBRA_MONITORS_H_
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
 #ifdef __cplusplus
 extern "C" {

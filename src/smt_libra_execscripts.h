@@ -18,8 +18,8 @@
  *
  */ 
 
-#ifndef _EXECSCRIPTS_H_
-#define _EXECSCRIPTS_H_
+#ifndef _SMT_LIBRA_EXECSCRIPTS_H_
+#define _SMT_LIBRA_EXECSCRIPTS_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -31,20 +31,17 @@ extern "C" {
 
 #define DEBUG(a,b,c...) ( (a <= debuglevel) && ( a >= 0) ? printf(b,##c) : NULL);
 
+int execScript(const char *);
+
 int execScript1(const char *, const char *);
-
-int execScript2(const char *, const char *,
-															const char *);
-
-int execScript3(const char *, const char *,
-															const char *, 
-															const char *);
-
-int execScript4(const char *, const char *,
-															const char *, 
-															const char *,
-															const char*);
-
+  
+int execScript2(const char *, const char *, const char *);
+  
+int execScript3(const char *, const char *,const char *, const char *);
+  
+int execScript4(const char *, const char *,const char *, const char *, 
+		                                         const char *);
+  
 #ifdef __cplusplus
 }
 #endif

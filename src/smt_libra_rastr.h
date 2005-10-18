@@ -18,8 +18,8 @@
  *
  */ 
 
-#ifndef _STR_H_
-#define _STR_H_
+#ifndef _SMT_LIBRA_RASTR_H_
+#define _SMT_LIBRA_RASTR_H_
 
 char *lstrip(char *);
 char *rstrip(char *);

@@ -30,29 +30,31 @@
 #include <signal.h>
 #include <string.h>
 #include <errno.h>
-#include "monitors.h"
+#include "smt_libra_monitors.h"
 
 struct monitor *init_monitor(int max){
-	struct monitor *m = (struct monitor *)malloc(sizeof(struct monitor));
-	if (!m)
-		return NULL;
-	m->nentries = 0;
-	m->maxentries = max;
-	m->entries =  (struct entry *)calloc(m->maxentries + 1,sizeof(struct entry));
-	if (!m->entries){
-		free(m);
-		return NULL;
-	}
-	return m;
+
+  struct monitor *m = (struct monitor *)malloc(sizeof(struct monitor));
+  if (!m)
+    return NULL;
+  m->nentries = 0;
+  m->maxentries = max;
+  m->entries =  (struct entry *)calloc(m->maxentries + 1,sizeof(struct entry));
+  if (!m->entries){
+    free(m);
+    return NULL;
+  }
+  return m;
 }
 void destroy_monitor(struct monitor *m){
-	int i;
-	for (i = 0; i < m->nentries; i++)
-		free(m->entries[i].filename);
-	free(m->entries);
-	free(m);
+	
+  int i;
+  for (i = 0; i < m->nentries; i++)
+    free(m->entries[i].filename);
+  free(m->entries);
+  free(m);
 }
-		
+
 struct entry *add_entry(struct monitor *m,char *filename){
 	
 	if (m->nentries >= m->maxentries){
@@ -113,10 +115,10 @@ int has_changes(struct monitor *m, const char *filename){
 		return -ENOENT;
 	ret = stat(filename,&st);
 	if (ret)
-		return ret;
+	  return ret;
 	if (memcmp(&st.st_mtime,&e->st.st_mtime,sizeof(time_t))){
-		ret = 0;
-		memcpy(&m->entries->st.st_mtime,&st.st_mtime,sizeof(time_t));
+	  ret = 0;
+	  memcpy(&m->entries->st.st_mtime,&st.st_mtime,sizeof(time_t));
 	}
 	else{
 		ret = 1;
