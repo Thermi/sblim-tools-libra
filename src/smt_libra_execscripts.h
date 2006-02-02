@@ -32,16 +32,17 @@ extern "C" {
 #define DEBUG(a,b,c...) ( (a <= debuglevel) && ( a >= 0) ? printf(b,##c) : NULL);
 
 int execScript(const char *);
-
 int execScript1(const char *, const char *);
-  
 int execScript2(const char *, const char *, const char *);
+int execScript3(const char *, const char *, const char *, const char *);
+int execScript4(const char *, const char *, const char *, const char *, const char *);
   
-int execScript3(const char *, const char *,const char *, const char *);
-  
-int execScript4(const char *, const char *,const char *, const char *, 
-		                                         const char *);
-  
+void *readData(const char *script,  void *(*func)(int));
+void *readData1(const char *script, const char *par1, void *(*func)(int));
+void *readData3(const char *script, const char *par1, const char *par2, const char *par3, void *(*func)(int));
+
+int writeData(const char *script, void (*func)(int));
+int writeData1(const char *script, const char *par1, void (*func)(int));
 #ifdef __cplusplus
 }
 #endif

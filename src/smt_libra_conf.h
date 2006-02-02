@@ -42,6 +42,7 @@ struct conf *read_conf(const char *,const char *);
 char *get_conf(struct conf *,const char *);
 char *script_path(struct conf *,const char *);
 char *plugin_path(const char *);
+void free_conf(struct conf *cf);
 
 #ifdef __cplusplus
 }

@@ -39,6 +39,7 @@ void free_conf(struct conf *cf){
   free(p);
 }
 
+/*
 static char *__path(struct conf *c,const char *name,char *conf,char *dfl){
 
   char *dir;
@@ -61,7 +62,7 @@ static char *__path(struct conf *c,const char *name,char *conf,char *dfl){
   
   return base;
 }
-
+*/
 /*
 char *script_path(const char *name){
 	return __path(name,SCRIPTS,SCRIPTPATH);
@@ -101,7 +102,6 @@ struct conf *read_conf(const char *file, const char *default_file){
   FILE *f = NULL;
   int count = 0;
   char *line, *lineptr;
-  char *ptr;
   struct conf *conf;
   
   if (!default_file){
@@ -113,7 +113,7 @@ struct conf *read_conf(const char *file, const char *default_file){
   if (!f)
     f = fopen(default_file,"r");
   if (!f)
-    return;
+    return NULL;
   
   conf = malloc(sizeof(struct conf));
   count = 0;

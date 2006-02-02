@@ -48,7 +48,7 @@ struct monitor *init_monitor(int);
 int monitor_file(struct monitor *,char *);
 int unmonitor_file(struct monitor *,char *);
 int check_events(struct monitor *);
-
+void destroy_monitor(struct monitor *m);
 #ifdef __cplusplus
 }
 #endif

@@ -34,6 +34,8 @@ doc_DATA=README AUTHORS COPYING
 #
 # Automake instructions for 'src' dir
 #
+AM_CFLAGS = -Wall
+AM_CPPFLAGS = -D_GNU_SOURCE
 
 #  LibRaTools libraries
 lib_LTLIBRARIES = libRaTools.la 

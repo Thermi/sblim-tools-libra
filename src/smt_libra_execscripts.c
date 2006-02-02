@@ -29,6 +29,7 @@
 
 int debuglevel = DEBUGLEVEL;
 
+/*
 static int __execScript(const char *script){
 
   if (!script)
@@ -39,7 +40,7 @@ static int __execScript(const char *script){
 
   return errno;
 }
-
+*/
 
 static int __execScript1(const char *script, const char *par1){
  
@@ -331,7 +332,7 @@ void *readData3(const char *script, const char *par1,const char *par2,
 }
 
 
-int writeData(const char *script, void *(*func)(int) ){
+int writeData(const char *script, void (*func)(int) ){
 
   int status,fd[2];
   char *pipefd;
@@ -357,7 +358,7 @@ int writeData(const char *script, void *(*func)(int) ){
 }
 
 
-int writeData1(const char *script, const char *par1,void *(*func)(int) ){
+int writeData1(const char *script, const char *par1,void (*func)(int) ){
   
   int status,fd[2];
   char *pipefd;
