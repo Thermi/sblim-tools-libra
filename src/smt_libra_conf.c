@@ -122,7 +122,7 @@ struct conf *read_conf(const char *file, const char *default_file){
   
   while (!feof(f)){
     if (!fgets(line,LINE,f)) break;
-    if ((!line) || (*line == '\n'))
+    if ((!line) || (*line == '\n') || (*line == '#'))
       continue;
     conf = realloc(conf,(count+2)*sizeof(struct conf)); 
     conf[count].key = preproc(strsep(&line,"="));

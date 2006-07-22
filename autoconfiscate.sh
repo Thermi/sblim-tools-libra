@@ -7,4 +7,6 @@ autoheader --force &&
 libtoolize --force && 
 automake --add-missing --force-missing &&
 autoconf --force &&
+echo
 echo "You may now run ./configure"
+echo

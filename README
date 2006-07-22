@@ -58,3 +58,8 @@ The simplest way to compile and install this package is:
   4. su to root and type 'make install' to install the libraries and the header files.
 
 This package is GNU autotool enabled; refer to the file named INSTALL for generic instructions.
+
+Contacting the WBEMSMT Project
+------------------------------
+To report weird behavior and bugs or suggestions and help contact the sblim project
+by sending email to the sblim-devel mailing list at sblim-devel@lists.sourceforge.net.

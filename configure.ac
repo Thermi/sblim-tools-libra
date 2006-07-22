@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(SBLIM Common Ressource Access Layer for WBEM-SMT tasks, 0.1.1, sblim-devel@lists.sourceforge.net, sblim-tools-libra)
+AC_INIT(SBLIM Common Ressource Access Layer for WBEM-SMT tasks, 0.2.1, sblim-devel@lists.sourceforge.net, sblim-tools-libra)
 AC_CONFIG_SRCDIR([.])
 AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE
@@ -79,7 +79,10 @@ echo ""
 echo "The following configuration options have been selected:"
 echo "CPPFLAGS:" $CPPFLAGS
 echo "-------------------------------------------------------"
+echo
 
 AC_OUTPUT
 
+echo
 echo "You may now run make"
+echo

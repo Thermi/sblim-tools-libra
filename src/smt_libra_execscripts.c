@@ -225,12 +225,15 @@ void *readData(const char *script,  void *(*func)(int) ){
   if(pid){
     data = func(fd[0]);
     waitpid(pid,&status,0);
+    close(fd[1]);
+    close(fd[0]);
   }else{
-    fprintf(stderr, "%s\n", script);
     __execScript1(script,pipefd);
     free(pipefd);
     perror(sys_errlist[errno]);
 
+    close(fd[0]);
+    close(fd[1]);
     exit(errno);
   }
 
@@ -255,12 +258,15 @@ void *readData1(const char *script, const char *par1,void *(*func)(int)){
   if(pid){
     data = func(fd[0]);
     waitpid(pid,&status,0);
+    close(fd[1]);
+    close(fd[0]);
   }else{
-    fprintf(stderr, "%s\n", script);
     __execScript2(script,par1,pipefd);
     free(pipefd);
     perror(sys_errlist[errno]);
 
+    close(fd[0]);
+    close(fd[1]);
     exit(errno);
   }
 
@@ -286,12 +292,15 @@ void *readData2(const char *script, const char *par1, const char *par2,
   if(pid){
     data = func(fd[0]);
     waitpid(pid,&status,0);
+    close(fd[1]);
+    close(fd[0]);
   }else{
-    fprintf(stderr, "%s\n", script);
     __execScript3(script,par1,par2,pipefd);
     free(pipefd);
     perror(sys_errlist[errno]);
 
+    close(fd[0]);
+    close(fd[1]);
     exit(errno);
   }
 
@@ -316,12 +325,15 @@ void *readData3(const char *script, const char *par1,const char *par2,
   if(pid){
     data = func(fd[0]);
     waitpid(pid,&status,0);
+    close(fd[1]);
+    close(fd[0]);
   }else{
-    fprintf(stderr, "%s\n", script);
     __execScript4(script,par1,par2,par3,pipefd);
     free(pipefd);
     perror(sys_errlist[errno]);
 
+    close(fd[0]);
+    close(fd[1]);
     exit(errno);
   }
 
@@ -345,11 +357,14 @@ int writeData(const char *script, void (*func)(int) ){
   if(pid){
     func(fd[1]);
     waitpid(pid,&status,0);
+    close(fd[1]);
+    close(fd[0]);
   }else{
-    fprintf(stderr, "%s\n", script);
     __execScript1(script,pipefd);
     perror(sys_errlist[errno]);
 
+    close(fd[1]);
+    close(fd[0]);
     exit(errno);
   }
 
@@ -371,11 +386,14 @@ int writeData1(const char *script, const char *par1,void (*func)(int) ){
   if(pid){
     func(fd[1]);
     waitpid(pid,&status,0);
+    close(fd[1]);
+    close(fd[0]);
   }else{
-    fprintf(stderr, "%s\n", script);
     __execScript2(script,par1,pipefd);
     perror(sys_errlist[errno]);
 
+    close(fd[1]);
+    close(fd[0]);
     exit(errno);
   }
   
