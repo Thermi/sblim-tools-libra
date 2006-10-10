@@ -106,7 +106,7 @@ int execScript(const char *script){
     return -WEXITSTATUS(status);
   }
   else{
-    fprintf(stderr, "%s", script);
+    fprintf(stderr, "exec: %s\n", script);
     execlp(script,script,NULL);
     perror(sys_errlist[errno]);
 
@@ -129,7 +129,7 @@ int execScript1(const char *script, const char *par1){
     return -WEXITSTATUS(status);
   }
   else{
-    fprintf(stderr, "%s", script);
+    fprintf(stderr, "exec: %s %s\n", script, par1);
     execlp(script,script,par1,NULL);
     perror(sys_errlist[errno]);
 
@@ -153,7 +153,7 @@ int execScript2(const char *script, const char *par1,const char *par2){
     return -WEXITSTATUS(status);
   }
   else{
-    fprintf(stderr, "%s", script);
+    fprintf(stderr, "exed %s %s %s\n", script, par1, par2);
     execlp(script,script,par1,par2,NULL);
     perror(sys_errlist[errno]);
 
@@ -178,7 +178,7 @@ int execScript3(const char *script, const char *par1,const char *par2,
     return -WEXITSTATUS(status);
   }
   else{
-    fprintf(stderr, "%s", script);
+    fprintf(stderr, "exec %s %s %s %s\n", script, par1, par2, par3);
     execlp(script,script,par1,par2,par3,NULL);
     perror(sys_errlist[errno]);
     exit(errno);
@@ -201,7 +201,7 @@ int execScript4(const char *script, const char *par1,const char *par2,
     return -WEXITSTATUS(status);
   }
   else{
-    fprintf(stderr, "%s", script);
+    fprintf(stderr, "exec: %s %s %s %s %s\n", script, par1, par2, par3, par4);
     execlp(script,script,par1,par2,par3,par4,NULL);
     perror(sys_errlist[errno]);
 

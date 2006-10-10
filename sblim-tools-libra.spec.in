@@ -1,5 +1,4 @@
 #
-# $Id$
 #
 # Package spec for @PACKAGE@
 #
@@ -9,7 +8,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 Summary: SBLIM Common Resource Access Library for WBEM-SMT tasks
 Name: @PACKAGE_TARNAME@
 Version: @PACKAGE_VERSION@
-Release: 1
+Release: 2
 Group: Systems Management/Base
 URL: http://www.sblim.org
 License: CPL

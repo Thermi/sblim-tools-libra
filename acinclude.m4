@@ -1,5 +1,4 @@
 dnl
-dnl $Id$
 dnl
  dnl 
  dnl (C) Copyright IBM Corp. 2004, 2005
