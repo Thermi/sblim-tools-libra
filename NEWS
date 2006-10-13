@@ -1,3 +1,8 @@
-News between initial release 0.1.1 and 0.2.1:
-  - Lots of bug fixing
-  - Lots of stability enhancements
+Changes in 0.2.1-2:
+==============================================================================
+- Updated printout statements to provide more information
+
+Changes in 0.2.1-1:
+==============================================================================
+- Lots of bug fixing
+- Lots of stability enhancements

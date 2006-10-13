@@ -1,6 +1,90 @@
-This is a major release upgrade for our inital release.
+// =========================================================================
+// new in version 0.2.1-2 :
 
-- Lots of bug fixes
-- Lots of improvements
-- Lots of stability enhancements
+
+2006-10-10 21:14  taphorn
+
+	* Makefile.am, acinclude.m4, sblim-tools-libra.spec.in,
+	  src/smt_libra_execscripts.c: Some cleanup work.
+
+	  Removed needless CVS Header from acinclude.m4, Makefile.am ans
+	  sblim-tools-libra.spec.in Updated the message content of
+	  printouts in the smt_libra_execscripts.c
+
+2006-07-22 14:45  taphorn
+
+	* AUTHORS, ChangeLog, Makefile.am, NEWS, README, acinclude.m4,
+	  autoconfiscate.sh, configure.ac, sblim-tools-libra.spec.in,
+	  src/smt_libra_conf.c, src/smt_libra_execscripts.c: Upload for new
+	  generation of tools libra: - Fixed several bugs - Added more
+	  stability
+
+	  Fixed Bugs: - pipe handles have never been closed... so suddenly
+	  the system ran out of file handles - null pointer handling has
+	  been improved.
+
+2006-02-02 16:53  taphorn
+
+	* Makefile.am, sblim-tools-libra.spec.in, src/smt_libra_conf.c,
+	  src/smt_libra_conf.h, src/smt_libra_execscripts.c,
+	  src/smt_libra_execscripts.h, src/smt_libra_monitors.h: Fixed up
+	  several compile problems.  Commented out unused functions.  Added
+	  several compiler flags.
+
+2005-10-18 13:40  taphorn
+
+	* .cdtproject, .cvsignore, .project, AUTHORS, COPYING, ChangeLog,
+	  INSTALL, Makefile, Makefile.am, NEWS, README, acinclude.m4,
+	  autoconfiscate.sh, conf.c, conf.h, configure.ac, execscripts.c,
+	  execscripts.h, license.txt, monitors.c, monitors.h, rastr.c,
+	  rastr.h, sblim-tools-libra.spec.in, setting.cmpi,
+	  src/smt_libra_conf.c, src/smt_libra_conf.h,
+	  src/smt_libra_execscripts.c, src/smt_libra_execscripts.h,
+	  src/smt_libra_monitors.c, src/smt_libra_monitors.h,
+	  src/smt_libra_rastr.c, src/smt_libra_rastr.h: Upgrade to next
+	  generation...
+
+2005-08-16 18:01  taphorn
+
+	* .project, INSTALL, Makefile, conf.c, conf.h, execscripts.c,
+	  execscripts.h, license.txt, monitors.c, monitors.h, rastr.c,
+	  rastr.h, setting.cmpi: WBEM-SMT ResourceAccess layer component
+
+	  First initial upload.
+
+	  This module includes: Common parts that are used between several
+	  WBEM-SMT tasks.
+
+// =========================================================================
+// new in version 0.2.1-1 :
+
+
+2006-10-10 21:14  taphorn
+
+	* Makefile.am, acinclude.m4, sblim-tools-libra.spec.in,
+	  src/smt_libra_execscripts.c: Some cleanup work.
+
+	  Removed needless CVS Header from acinclude.m4, Makefile.am ans
+	  sblim-tools-libra.spec.in Updated the message content of
+	  printouts in the smt_libra_execscripts.c
+
+2006-07-22 14:45  taphorn
+
+	* AUTHORS, ChangeLog, Makefile.am, NEWS, README, acinclude.m4,
+	  autoconfiscate.sh, configure.ac, sblim-tools-libra.spec.in,
+	  src/smt_libra_conf.c, src/smt_libra_execscripts.c: Upload for new
+	  generation of tools libra: - Fixed several bugs - Added more
+	  stability
+
+	  Fixed Bugs: - pipe handles have never been closed... so suddenly
+	  the system ran out of file handles - null pointer handling has
+	  been improved.
+
+2006-02-02 16:53  taphorn
+
+	* Makefile.am, sblim-tools-libra.spec.in, src/smt_libra_conf.c,
+	  src/smt_libra_conf.h, src/smt_libra_execscripts.c,
+	  src/smt_libra_execscripts.h, src/smt_libra_monitors.h: Fixed up
+	  several compile problems.  Commented out unused functions.  Added
+	  several compiler flags.
 
