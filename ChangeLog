@@ -1,5 +1,30 @@
 // =========================================================================
-// new in version 0.2.1-2 :
+// new in version 0.2.3-1 :
+
+2006-12-04 15:16  taphorn
+
+	* configure.ac, sblim-tools-libra.spec.in,
+	  .settings/org.eclipse.cdt.core.prefs: Version upgrade to the
+	  0.2.3-1 release
+
+2006-12-04 15:15  taphorn
+
+	* src/: smt_libra_conf.c, smt_libra_conf.h, smt_libra_rastr.c: Fix
+	  for #1608477
+
+	  The fix imlemented the 'writeConf' and the 'setConf'
+	  functionality
+
+2006-12-04 15:13  taphorn
+
+	* src/: smt_libra_execscripts.h, smt_libra_execscripts.c: Fix for
+	  #1608475
+
+	  The '#define DEBUG' defines ar enow removed
+
+
+// =========================================================================
+// new in version 0.2.2-1 :
 
 
 2006-10-10 21:14  taphorn
