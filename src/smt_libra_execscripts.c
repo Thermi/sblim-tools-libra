@@ -27,8 +27,6 @@
 #include <errno.h>
 #include "smt_libra_execscripts.h"
 
-int debuglevel = DEBUGLEVEL;
-
 /*
 static int __execScript(const char *script){
 

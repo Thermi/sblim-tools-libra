@@ -25,12 +25,6 @@
 extern "C" {
 #endif 
 
-#ifndef DEBUGLEVEL
-	#define DEBUGLEVEL 3
-#endif
-
-#define DEBUG(a,b,c...) ( (a <= debuglevel) && ( a >= 0) ? printf(b,##c) : NULL);
-
 int execScript(const char *);
 int execScript1(const char *, const char *);
 int execScript2(const char *, const char *, const char *);
