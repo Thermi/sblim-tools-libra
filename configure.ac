@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(SBLIM Common Ressource Access Layer for WBEM-SMT tasks, 0.2.2, sblim-devel@lists.sourceforge.net, sblim-tools-libra)
+AC_INIT(SBLIM Common Ressource Access Layer for WBEM-SMT tasks, 0.2.3, sblim-devel@lists.sourceforge.net, sblim-tools-libra)
 AC_CONFIG_SRCDIR([.])
 AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE
@@ -16,31 +16,6 @@ case $host_cpu in
      ia64) HW=IA64;; 
      **) HW=GENERIC;;
 esac
-
-
-AC_ARG_ENABLE(
-  debug,
-  [AS_HELP_STRING([--enable-debug],[enable debugging messages [default=yes]])],
-  [
-    if test $enableval = "yes"; then
-      AC_MSG_RESULT(debugging ENABLED)
-      CFLAGS="$CFLAGS -O0 -g"
-      CXXFLAGS="$CXXFLAGS -O0 -g"
-      FFLAGS="$FFLAGS -O0 -g"
-    else
-      AC_MSG_RESULT(debugging DISABLED)
-      CFLAGS="$CFLAGS -O2"
-      CXXFLAGS="$CXXFLAGS -O2"
-      FFLAGS="$FFLAGS -O2"
-    fi
-  ],
-  [
-    AC_MSG_RESULT(debugging ENABLED)
-    CFLAGS="$CFLAGS -O0 -g"
-    CXXFLAGS="$CXXFLAGS -O0 -g"
-    FFLAGS="$FFLAGS -O0 -g"
-  ]
-)
 
 
 # Checks for programs.
@@ -72,17 +47,16 @@ AC_CONFIG_FILES([Makefile sblim-tools-libra.spec])
 
 AM_CONDITIONAL(NOEVENTS,false)
 
+AC_OUTPUT
+
 # Display configuration options
+echo
 echo "-------------------------------------------------------"
 echo "Configuration for $PACKAGE complete."
 echo ""
 echo "The following configuration options have been selected:"
 echo "CPPFLAGS:" $CPPFLAGS
 echo "-------------------------------------------------------"
-echo
-
-AC_OUTPUT
-
 echo
 echo "You may now run make"
 echo

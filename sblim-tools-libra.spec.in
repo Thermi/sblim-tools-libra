@@ -17,7 +17,7 @@ Source0: http://prdownloads.sourceforge.net/sblim/%{name}-%{version}.tar.bz2
 
 %Description
 The tools-libra package provides common functionality required by 
-the task-specific resource access layers of the wbem-smt tasks such as 
+the task-specific resource access layers of wbem-smt tasks such as 
 cmpi-dns and cmpi-samba.
 
 
@@ -87,5 +87,16 @@ strip $RPM_BUILD_ROOT/%{_libdir}/*.so*
 %{_libdir}/*.so
 
 %changelog
-* Wed Aug 25 2005 Wolfgang Taphorn <taphorn@de.ibm.com> %{version}-%{release}
+* Fri Dec 1 2006 Wolfgang Taphorn <taphorn@de.ibm.com> 0.2.3-1
+  - Functional enhancements
+  - Removed 'DEBUG' defines
+
+* Wed Oct 11 2006 Wolfgang Taphorn <taphorn@de.ibm.com> 0.2.2-1
+  - Cleanup work
+
+* Sat Jul 22 2006 Wolfgang Taphorn <taphorn@de.ibm.com> 0.2.1-1
+  - Stabelized code
+
+* Wed Aug 25 2005 Wolfgang Taphorn <taphorn@de.ibm.com> 0.1.1-1
   - initial support
+  
