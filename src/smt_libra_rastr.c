@@ -12,11 +12,12 @@
  *
  * Author:  Glauber de Oliveira Costa <gocosta@br.ibm.com>
  *
- * Contributors:
+ * Contributors: Tyrel Datwyler <tyreld@us.ibm.com>
  *
  * Description: Resource Access String utilities.
  *
  */ 
+#include <stdlib.h>
 #include <string.h>
 #include <strings.h>
 
@@ -34,7 +35,6 @@ char *nonl(char *string){
 
 
 static char *__noquotes(char *str){
-	
   char *ptr;
   while ( ((ptr = strpbrk(str,"\"'")) != NULL) && *str )
     strcpy(ptr,ptr+1);
@@ -54,11 +54,11 @@ static char *__rstrip(char *str){
 }
 
 static char *__lstrip(char *str){
+  char *tmp = malloc(strlen(str) * sizeof(char));
   char *ptr = nonl(str);
   
   while ((*ptr == ' ') && *ptr)
-    strcpy(ptr,ptr+1);
-  
+    ptr = strcpy(tmp,ptr+1);  
   
   return ptr;
 }

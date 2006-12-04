@@ -12,7 +12,7 @@
  *
  * Author:  Glauber de Oliveira Costa <gocosta@br.ibm.com>
  *
- * Contributors:
+ * Contributors: Tyrel Datwyler <tyreld@us.ibm.com>
  *
  * Description: Functionality to handle the basic configuration file 
  * for the Resource Access layer
@@ -95,7 +95,32 @@ char *script_path(struct conf *conf, const char *name){
   strcat(script,name);
   
   return script;
-} 
+}
+
+int write_conf(const char *file, const struct conf *conf) {
+  FILE *f = NULL;
+  char *line;
+  int ret = 0;
+  
+  f = fopen(file, "w");
+  if (!f)
+    return -1;
+
+  line = (char *)malloc(sizeof(char) * LINE);
+
+  while (conf && conf->key && conf->value) {
+    snprintf(line, LINE, "%s = %s\n", conf->key, conf->value);
+    if (fputs(line, f) == EOF) {
+      ret = -1;
+      break;
+    }
+    conf++;
+  }
+
+  fclose(f);
+
+  return ret;
+}
 
 struct conf *read_conf(const char *file, const char *default_file){
 
@@ -117,7 +142,7 @@ struct conf *read_conf(const char *file, const char *default_file){
   
   conf = malloc(sizeof(struct conf));
   count = 0;
-  lineptr = (char *)malloc(1024*sizeof(char));
+  lineptr = (char *)malloc(LINE*sizeof(char));
   line = lineptr;
   
   while (!feof(f)){
@@ -143,6 +168,32 @@ struct conf *read_conf(const char *file, const char *default_file){
   
   return conf;
   
+}
+
+struct conf *set_conf(struct conf **c, const char *key, const char *value) {
+  struct conf *conf = *c;
+  int i = 0;
+
+  while (conf && conf->key && strcmp(conf->key, key)) {
+    conf++;
+    i++;
+  }
+
+  if (conf && conf->key) {
+    free(conf->value);
+    conf->value = strdup(value);
+  } else {
+    *c = (struct conf *)realloc(*c, (i+2) * sizeof(struct conf));
+    conf = *c;
+    
+    conf[i].key = strdup(key);
+    conf[i].value = strdup(value);
+
+    conf[i+1].key = NULL;
+    conf[i+1].value = NULL;
+  }
+
+  return *c;
 }
 
 char *get_conf(struct conf *c,const char *key){

@@ -38,7 +38,9 @@ struct conf{
 	char *value;
 };
 
+int write_conf(const char *, const struct conf *);
 struct conf *read_conf(const char *,const char *);
+struct conf *set_conf(struct conf **, const char *, const char *);
 char *get_conf(struct conf *,const char *);
 char *script_path(struct conf *,const char *);
 char *plugin_path(const char *);
