@@ -1,3 +1,7 @@
+Changes in 0.5.0-1:
+==============================================================================
+- None... just increasing the version number for dependency reason
+
 Changes in 0.2.3-1:
 ==============================================================================
 - #1608475 tools-libra: Remove needless 'DEBUG' defines
