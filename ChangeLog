@@ -1,7 +1,23 @@
 // =========================================================================
 // new in version 0.5.0-1 :
 //
-// - no News, just a version increase --
+
+2007-07-31 23:10  taphorn
+
+	* NEWS, sblim-tools-libra.spec.in: Fix for issue [ 1764884 ]
+	  tools-libra: More specific on package content
+
+2007-07-31 16:16  taphorn
+
+	* ChangeLog: Just added 0.5.0 statement to ChangeLog
+
+2007-07-31 16:15  taphorn
+
+	* ChangeLog: Added 0.5.0 statement to ChangeLog
+
+2007-07-07 00:01  taphorn
+
+	* NEWS, README, configure.ac: Latest fixes for 0.5.0 release
 
 
 // =========================================================================
