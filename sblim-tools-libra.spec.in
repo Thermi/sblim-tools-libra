@@ -74,19 +74,23 @@ strip $RPM_BUILD_ROOT/%{_libdir}/*.so*
 /sbin/ldconfig
 
 %files
-
 %defattr(-,root,root) 
 %docdir %{_datadir}/doc/%{name}-%{version}
 %{_datadir}/doc/%{name}-%{version}
-%{_libdir}/*.so.*
+%{_libdir}/libRaTools.so.*
 
 %files devel
-
 %defattr(-,root,root)
-%{_includedir}/*
-%{_libdir}/*.so
+%dir %{_includedir}/sblim
+%{_includedir}/sblim/smt_libra*.h
+%{_libdir}/libRaTools.so
+
 
 %changelog
+* Tue Jul 31 2007 Wolfgang Taphorn <taphorn@de.ibm.com> 0.5.0-1
+  - Inclusion of fixes for the following issues:
+    o 1764884  tools-libra: More specific on package content
+
 * Fri Dec 1 2006 Wolfgang Taphorn <taphorn@de.ibm.com> 0.2.3-1
   - Functional enhancements
   - Removed 'DEBUG' defines

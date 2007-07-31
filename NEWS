@@ -1,11 +1,11 @@
 Changes in 0.5.0-1:
 ==============================================================================
-- None... just increasing the version number for dependency reason
+- 1764884  tools-libra: More specific on package content
 
 Changes in 0.2.3-1:
 ==============================================================================
-- #1608475 tools-libra: Remove needless 'DEBUG' defines
-- #1608477 tools-libra: Add functionality to modify the configuration
+- 1608475 tools-libra: Remove needless 'DEBUG' defines
+- 1608477 tools-libra: Add functionality to modify the configuration
 
 Changes in 0.2.2-1:
 ==============================================================================
