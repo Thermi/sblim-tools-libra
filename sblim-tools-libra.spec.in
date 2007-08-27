@@ -87,6 +87,9 @@ strip $RPM_BUILD_ROOT/%{_libdir}/*.so*
 
 
 %changelog
+* Mon Aug 27 2007 Wolfgang Taphorn <taphorn@de.ibm.com> 0.5.1-1
+  - Increase of version number
+
 * Tue Jul 31 2007 Wolfgang Taphorn <taphorn@de.ibm.com> 0.5.0-1
   - Inclusion of fixes for the following issues:
     o 1764884  tools-libra: More specific on package content
