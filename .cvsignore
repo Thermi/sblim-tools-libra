@@ -23,3 +23,9 @@ missing
 monitors.lo
 rastr.lo
 stamp-h1
+config.log
+sblim-tools-libra.spec
+smt_libra_conf.lo
+smt_libra_execscripts.lo
+smt_libra_monitors.lo
+smt_libra_rastr.lo
