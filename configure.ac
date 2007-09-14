@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT(SBLIM Common Ressource Access Layer for WBEM-SMT tasks, 0.5.1, sblim-devel@lists.sourceforge.net, sblim-tools-libra)
+AC_INIT(SBLIM Common Ressource Access Layer for WBEM-SMT tasks, 0.5.2, sblim-devel@lists.sourceforge.net, sblim-tools-libra)
 AC_CONFIG_SRCDIR([.])
 AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE

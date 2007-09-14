@@ -87,6 +87,9 @@ strip $RPM_BUILD_ROOT/%{_libdir}/*.so*
 
 
 %changelog
+* Fri Sep 14 2007 Wolfgang Taphorn <taphorn@de.ibm.com> 0.5.2-1
+  - Increase of version number
+
 * Mon Aug 27 2007 Wolfgang Taphorn <taphorn@de.ibm.com> 0.5.1-1
   - Increase of version number
 
