@@ -1,3 +1,7 @@
+Changes in 0.5.2-CVS:
+==============================================================================
+- 1845495  tools-libra: Include proper group definition for RPM build
+
 Changes in 0.5.2-1:
 ==============================================================================
 - Increase of version number

@@ -8,8 +8,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 Summary: SBLIM Common Resource Access Library for WBEM-SMT tasks
 Name: @PACKAGE_TARNAME@
 Version: @PACKAGE_VERSION@
-Release: 1
-Group: Systems Management/Base
+Release: CVS
+Group: Systems Management/Libraries/Instrumentation
 URL: http://www.sblim.org
 License: CPL
 
@@ -23,7 +23,7 @@ cmpi-dns and cmpi-samba.
 
 %Package devel
 Summary: SBLIM Common Resource Access Library for WBEM-SMT tasks Header Development Files
-Group: Systems Management/Base
+Group: Systems Management/Libraries/Instrumentation
 Requires: %{name} = %{version}
 
 %Description devel
@@ -87,6 +87,9 @@ strip $RPM_BUILD_ROOT/%{_libdir}/*.so*
 
 
 %changelog
+* Fri Sep 14 2007 Wolfgang Taphorn <taphorn@de.ibm.com> 0.5.2-CVS
+  - 1845495  tools-libra: Include proper group definition for RPM build
+
 * Fri Sep 14 2007 Wolfgang Taphorn <taphorn@de.ibm.com> 0.5.2-1
   - Increase of version number
 

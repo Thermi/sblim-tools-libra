@@ -29,3 +29,4 @@ smt_libra_conf.lo
 smt_libra_execscripts.lo
 smt_libra_monitors.lo
 smt_libra_rastr.lo
+sblim-tools-libra-*.tar.bz2
