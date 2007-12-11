@@ -1,3 +1,14 @@
+2007-12-11 10:39  skanan
+
+	* NEWS, configure.ac, sblim-tools-libra.spec.in: Maintenance
+	  release 0.5.3-1
+
+2007-12-06 09:18  taphorn
+
+	* .cvsignore, NEWS, sblim-tools-libra.spec.in: Fix for issue
+	  [1845495]  tools-libra: Include proper group definition for RPM
+	  build
+
 // =========================================================================
 // new in version 0.5.2-1 :
 //
