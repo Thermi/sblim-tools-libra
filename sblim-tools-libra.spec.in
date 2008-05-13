@@ -87,6 +87,9 @@ strip $RPM_BUILD_ROOT/%{_libdir}/*.so*
 
 
 %changelog
+* Mon May 12 2008 Sam Kannan <skanan@us.ibm.com> 0.5.5-1
+  - Maintenance release
+  
 * Wed Apr 30 2008 Sam Kannan <skanan@us.ibm.com> 0.5.4-1
   - Maintenance release
 
