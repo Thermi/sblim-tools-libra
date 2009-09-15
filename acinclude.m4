@@ -3,12 +3,12 @@ dnl
  dnl 
  dnl (C) Copyright IBM Corp. 2004, 2005
  dnl
- dnl THIS FILE IS PROVIDED UNDER THE TERMS OF THE COMMON PUBLIC LICENSE
+ dnl THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
  dnl ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
  dnl CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
  dnl
- dnl You can obtain a current copy of the Common Public License from
- dnl  http://www.opensource.org/licenses/cpl1.0.php
+ dnl You can obtain a current copy of the Eclipse Public License from
+ dnl  http://www.opensource.org/licenses/eclipse-1.0.php
  dnl
  dnl Author:       Konrad Rzeszutek <konradr@us.ibm.com>
  dnl Contributors: Viktor Mihajlovski <mihajlov@de.ibm.com>
