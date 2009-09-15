@@ -11,7 +11,7 @@ Version: @PACKAGE_VERSION@
 Release: 1
 Group: Systems Management/Libraries/Instrumentation
 URL: http://www.sblim.org
-License: CPL
+License: EPL
 
 Source0: http://prdownloads.sourceforge.net/sblim/%{name}-%{version}.tar.bz2
 
